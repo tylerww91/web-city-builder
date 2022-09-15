@@ -3,10 +3,14 @@
 /* Get DOM Elements */
 
 const cityInput = document.getElementById('city-input');
-const climateSelect = document.getElementById('climate-input');
-const architectureSelect = document.getElementById('architecture-input');
+const climateSelect = document.getElementById('climate-select');
+const architectureSelect = document.getElementById('architecture-select');
 
 const attractionsInput = document.getElementById('attractions-input');
+const attractionsList = document.getElementById('attractions-list');
+const nameDisplay = document.getElementById('name-display');
+const climateDisplay = document.getElementById('climate-display');
+const architectureDisplay = document.getElementById('architecture-display');
 
 /* State */
 const city = {
@@ -16,35 +20,51 @@ const city = {
     attractions: [],
 };
 
-
-
-
 /* Events */
 cityInput.addEventListener('input', () => {
-    const city.name = cityInput.value,
+    city.name = cityInput.value;
     displayCity();
 });
 
 climateSelect.addEventListener('change', () => {
-    const city.climate = climateSelect.value,
-    displayCIty();
+    city.climate = climateSelect.value;
+    displayCity();
 });
 
 architectureSelect.addEventListener('change', () => {
-    const city.architecture = architectureSelect.value,
-    displayCIty();
+    city.architecture = architectureSelect.value;
+    displayCity();
 });
 
 /* Display Functions */
 
-displayControl() {
+function displayControl() {
     cityInput.value = city.name;
     climateSelect.value = city.climate;
     architectureSelect.value = city.architecture;
-};
+}
 
-displayCity() {
-    cityInput.
-};
+// displayClimate() {
+
+// }
+
+function displayCity() {
+    nameDisplay.textContent = city.name;
+    climateDisplay.src = 'assets/' + city.climate + '-climate.jpg';
+    architectureDisplay.src = 'assets/' + city.architecture + '-architecture.jpg';
+}
+
+function displayAttractions() {
+    attractionsList.innerHTML = '';
+
+    for (const attractions of city.attractions) {
+        const li = document.createElement('li');
+        li.textContent = attractions;
+        attractionsList.append('li');
+    }
+}
 
 // (don't forget to call any display functions you want to run on page load!)
+displayControl();
+displayCity();
+displayAttractions();
