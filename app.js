@@ -8,6 +8,7 @@ const architectureSelect = document.getElementById('architecture-select');
 
 const attractionsInput = document.getElementById('attractions-input');
 const attractionsList = document.getElementById('attractions-list');
+const attractionsButton = document.getElementById('city-attraction-button');
 const nameDisplay = document.getElementById('name-display');
 const climateDisplay = document.getElementById('climate-display');
 const architectureDisplay = document.getElementById('architecture-display');
@@ -36,6 +37,12 @@ architectureSelect.addEventListener('change', () => {
     displayCity();
 });
 
+attractionsButton.addEventListener('click', () => {
+    const attraction = attractionsInput.value;
+    city.attractions.push(attraction);
+    displayAttractions();
+});
+
 /* Display Functions */
 
 function displayControl() {
@@ -60,7 +67,7 @@ function displayAttractions() {
     for (const attractions of city.attractions) {
         const li = document.createElement('li');
         li.textContent = attractions;
-        attractionsList.append('li');
+        attractionsList.append(li);
     }
 }
 
