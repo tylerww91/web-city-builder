@@ -13,9 +13,16 @@ main {
 
 .city-designer {
     display: grid;
+    background-color: bisque;
+    padding: 0px 15px 25px 15px;
 }
 
-h3 {
+h3,
+h2 {
+    text-align: center;
+}
+
+h4 {
     text-align: center;
 }
 
@@ -26,4 +33,17 @@ label {
 #attraction-container {
     display: grid;
     grid-template-columns: 1fr auto;
+}
+
+#img-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding-top: 25px;
+}
+
+#attraction-list-container {
+    display: grid;
+    padding-top: 20px;
+    padding-left: 70px;
 }
