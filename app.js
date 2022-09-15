@@ -9,6 +9,15 @@ const architectureSelect = document.getElementById('architecture-input');
 const attractionsInput = document.getElementById('attractions-input');
 
 /* State */
+const city = {
+    name: '',
+    climate: 'desert',
+    architecture: 'gothic',
+    attractions: [],
+};
+
+
+
 
 /* Events */
 cityInput.addEventListener('input', () => {
@@ -19,15 +28,23 @@ cityInput.addEventListener('input', () => {
 climateSelect.addEventListener('change', () => {
     const city.climate = climateSelect.value,
     displayCIty();
-})
+});
 
 architectureSelect.addEventListener('change', () => {
     const city.architecture = architectureSelect.value,
     displayCIty();
-})
+});
 
 /* Display Functions */
 
-displayCity()
+displayControl() {
+    cityInput.value = city.name;
+    climateSelect.value = city.climate;
+    architectureSelect.value = city.architecture;
+};
+
+displayCity() {
+    cityInput.
+};
 
 // (don't forget to call any display functions you want to run on page load!)
