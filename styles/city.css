@@ -1,0 +1,29 @@
+main {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+#city-display {
+    background-color: aquamarine;
+    height: 500px;
+    width: 600px;
+}
+
+.city-designer {
+    display: grid;
+}
+
+h3 {
+    text-align: center;
+}
+
+label {
+    display: grid;
+}
+
+#attraction-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
