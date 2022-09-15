@@ -12,6 +12,7 @@ const attractionsButton = document.getElementById('city-attraction-button');
 const nameDisplay = document.getElementById('name-display');
 const climateDisplay = document.getElementById('climate-display');
 const architectureDisplay = document.getElementById('architecture-display');
+const cityDisplay = document.getElementById('city-display');
 
 /* State */
 const city = {
@@ -58,7 +59,11 @@ function displayControl() {
 function displayCity() {
     nameDisplay.textContent = city.name;
     climateDisplay.src = 'assets/' + city.climate + '-climate.jpg';
+    climateDisplay.alt = city.climate;
     architectureDisplay.src = 'assets/' + city.architecture + '-architecture.jpg';
+    architectureDisplay.alt = city.architecture;
+    cityDisplay.classList.value = '';
+    cityDisplay.classList.add(city.climate, city.architecture);
 }
 
 function displayAttractions() {
