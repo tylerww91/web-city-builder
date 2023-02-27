@@ -1,39 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>Web App</title>
+        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
-    <!-- title and favicon -->
-    <title>Web App</title>
-    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
 
-    <!-- fonts -->
-    <!-- see https://fonts.google.com/ -->
+        <!-- css -->
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <link rel="stylesheet" href="styles/city.css" />
+        <!-- add link for page specific css -->
+    </head>
 
-    <!-- css -->
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <!-- add link for page specific css -->
+    <body>
+        <header>
+            <img class="logo" src="assets/html_css_js.png" alt="logo" />
+            <h1>Web App</h1>
+        </header>
 
-</head>
+        <main>
+            <section class="city-designer">
+                <h4>Build-a-city</h4>
+                <label for="city-input">
+                    City
+                    <input type="text" id="city-input" />
+                </label>
 
-<body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
-    </header>
+                <label for="climate-select">
+                    Climate
+                    <select id="climate-select">
+                        <option value="desert">Desert</option>
+                        <option value="polar">Polar</option>
+                        <option value="tropical">Tropical</option>
+                        <option value="soupy">Soupy</option>
+                    </select>
+                </label>
 
-    <main>
+                <label for="architecture">
+                    Architecture
+                    <select id="architecture-select">
+                        <option value="gothic">Gothic</option>
+                        <option value="victorian">Victorian</option>
+                        <option value="sustainable">Sustainable architecture</option>
+                        <option value="googie">Googie</option>
+                    </select>
+                </label>
 
-    </main>
-
-</body>
-
+                <div>
+                    <label for="attractions">
+                        City Attractions
+                        <div id="attraction-container">
+                            <input type="text" id="attractions-input" />
+                            <button id="city-attraction-button">+</button>
+                        </label>
+                    </div>
+                </div>
+            </section>
+            <article id="city-display">
+                <h3>I present to you...</h3>
+                <h2 id="name-display"></h2>
+                <div id="img-container">
+                    <label>
+                        Climate
+                        <img id="climate-display" src="/assets/desert-climate.jpg" alt="desert climate" height="150px">
+                    </label>
+                    <label>
+                        Architecture
+                        <img id="architecture-display" src="/assets/gothic-architecture.jpg" alt="gothic architecture" height="150px">
+                    </label>    
+                </div>
+                <div id="attraction-list-container">
+                    <label>City Attractions</label>
+                    <ul id="attractions-list">
+                        
+                        <li></li>
+                    </ul>
+                </div>
+            </article>
+        </main>
+    </body>
 </html>

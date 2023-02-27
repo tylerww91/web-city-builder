@@ -1,0 +1,85 @@
+main {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+#city-display {
+    background-color: aquamarine;
+    height: 500px;
+    width: 600px;
+}
+
+.city-designer {
+    display: grid;
+    background-color: bisque;
+    padding: 0px 15px 25px 15px;
+}
+
+h3,
+h2 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+label {
+    display: grid;
+}
+
+#attraction-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+#img-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding-top: 25px;
+}
+
+#attraction-list-container {
+    display: grid;
+    padding-top: 20px;
+    padding-left: 70px;
+}
+
+.polar {
+    background-color: lightsteelblue !important;
+    border: 2px solid royalblue;
+}
+
+.soupy {
+    background-color: darkolivegreen !important;
+    border: 2px solid lightgoldenrodyellow;
+}
+
+.tropical {
+    background-color: lightskyblue !important;
+    border: 2px solid hotpink;
+}
+
+.desert {
+    background-color: khaki !important;
+    border: 2px solid orangered;
+}
+
+.victorian {
+    font-family: cursive;
+}
+
+.gothic {
+    font-family: fantasy;
+}
+
+.googie {
+    font-family: monospace;
+}
+
+.sustainable {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

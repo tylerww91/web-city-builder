@@ -17,16 +17,14 @@ The structure of a test is very similar to the use of `addEventListener`!
 
 ```js
 // Each test case
-test('test name', (expect) => {
-
-});
+test('test name', (expect) => {});
 ```
 
-Part | Purpose
----|---
-`test` | Built-in QUnit testing method
-`'test name'` | Descriptive test name
-`(expect) => {...}` | Function (arrow function) that will be called _by qUnit_ to run the test
+| Part                | Purpose                                                                  |
+| ------------------- | ------------------------------------------------------------------------ |
+| `test`              | Built-in QUnit testing method                                            |
+| `'test name'`       | Descriptive test name                                                    |
+| `(expect) => {...}` | Function (arrow function) that will be called _by qUnit_ to run the test |
 
 ## Test setup
 
@@ -38,7 +36,7 @@ test('demo: calculate area of a triangle', (expect) => {
     const height = 4;
     const expected = 6;
 
-    //Act 
+    //Act
     // Call the function you're testing and set the result to a const
     const actual = areaOfTriangle(base, height);
 
@@ -48,11 +46,11 @@ test('demo: calculate area of a triangle', (expect) => {
 });
 ```
 
-Part | Purpose
----|---
-`// Arrange` | What are the inputs and outputs?
-`// Act` | Run the function being tested!
-`// Assert` | Validate by asserting something is true
+| Part         | Purpose                                 |
+| ------------ | --------------------------------------- |
+| `// Arrange` | What are the inputs and outputs?        |
+| `// Act`     | Run the function being tested!          |
+| `// Assert`  | Validate by asserting something is true |
 
 ## Functions
 
@@ -63,9 +61,7 @@ Write your tests and corresponding functions _one feature at a time_. Don't stub
 Add the `export` keyword in front of your declared function definition:
 
 ```js
-export function areaOfTriangle(base, height) {
-    
-}
+export function areaOfTriangle(base, height) {}
 ```
 
 ### Importing function(s)
@@ -88,8 +84,10 @@ For each function feature:
 1. Add empty test in `test/tests.js`
 1. Create and `export` empty function from aptly-named module file (`something.js`) and import into `test/tests.js`
 1. Write test:
-    - Translate inputs and outputs into "Arrange" variables, 
+    - Translate inputs and outputs into "Arrange" variables,
     - write the "Act" function call
     - modify "Assert" if needed
 1. Add parameters to function, write code to make pass
 1. Implement additional tests if required (using same function)
+
+[wireframe](https://whimsical.com/web-city-builder-2fr8oR9fpQyK33Gr8W8QgS)
