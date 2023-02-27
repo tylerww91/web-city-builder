@@ -52,9 +52,6 @@ function displayControl() {
     architectureSelect.value = city.architecture;
 }
 
-// displayClimate() {
-
-// }
 
 function displayCity() {
     nameDisplay.textContent = city.name;
